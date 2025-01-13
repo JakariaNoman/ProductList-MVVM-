@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E2C7C25E2D32DCF400E29FEC /* ReactiveSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2C7C25D2D32DCF400E29FEC /* ReactiveSwift */; };
+		E2C7C2612D32DDC000E29FEC /* ReactiveCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E2C7C2602D32DDC000E29FEC /* ReactiveCocoa */; };
+		E2C8065C2D324143006A0469 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E2C8065B2D324143006A0469 /* Kingfisher */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		E252FBAE2D2F635200350DB4 /* Prouduct List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prouduct List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2C8065C2D324143006A0469 /* Kingfisher in Frameworks */,
+				E2C7C2612D32DDC000E29FEC /* ReactiveCocoa in Frameworks */,
+				E2C7C25E2D32DCF400E29FEC /* ReactiveSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,9 @@
 			);
 			name = "Prouduct List";
 			packageProductDependencies = (
+				E2C8065B2D324143006A0469 /* Kingfisher */,
+				E2C7C25D2D32DCF400E29FEC /* ReactiveSwift */,
+				E2C7C2602D32DDC000E29FEC /* ReactiveCocoa */,
 			);
 			productName = "Prouduct List";
 			productReference = E252FBAE2D2F635200350DB4 /* Prouduct List.app */;
@@ -107,6 +119,11 @@
 			);
 			mainGroup = E252FBA52D2F635200350DB4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E2C8065A2D324143006A0469 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				E2C7C25C2D32DCF400E29FEC /* XCRemoteSwiftPackageReference "ReactiveSwift" */,
+				E2C7C25F2D32DDC000E29FEC /* XCRemoteSwiftPackageReference "ReactiveCocoa" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E252FBAF2D2F635200350DB4 /* Products */;
 			projectDirPath = "";
@@ -333,6 +350,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E2C7C25C2D32DCF400E29FEC /* XCRemoteSwiftPackageReference "ReactiveSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveCocoa/ReactiveSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.2.0;
+			};
+		};
+		E2C7C25F2D32DDC000E29FEC /* XCRemoteSwiftPackageReference "ReactiveCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveCocoa/ReactiveCocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+		E2C8065A2D324143006A0469 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E2C7C25D2D32DCF400E29FEC /* ReactiveSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2C7C25C2D32DCF400E29FEC /* XCRemoteSwiftPackageReference "ReactiveSwift" */;
+			productName = ReactiveSwift;
+		};
+		E2C7C2602D32DDC000E29FEC /* ReactiveCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2C7C25F2D32DDC000E29FEC /* XCRemoteSwiftPackageReference "ReactiveCocoa" */;
+			productName = ReactiveCocoa;
+		};
+		E2C8065B2D324143006A0469 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2C8065A2D324143006A0469 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E252FBA62D2F635200350DB4 /* Project object */;
 }
