@@ -10,6 +10,7 @@ enum TableViewSection: Int, CaseIterable {
     case defaultInformation
     case productListData
 }
+
 class ProductListViewController: UIViewController {
     
     @IBOutlet weak var productTableView: UITableView!

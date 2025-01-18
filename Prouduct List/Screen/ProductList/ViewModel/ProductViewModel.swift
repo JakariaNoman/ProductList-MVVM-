@@ -6,20 +6,30 @@
 //
 
 import Foundation
+import ReactiveSwift
 
 final class ProductViewModel {
-    var products : [ProductInfo] = .init()
+    var products : [ProductInfo] = []
     var eventHandler : ((_ event: Event) -> Void)?
     
     func fetchProduct () {
         eventHandler?(.loadding)
-        APIManager.fetchProductData { [weak self] result in
+        
+        APIManager.fetchProductList().startWithResult { [weak self] result in
             
             guard let self else { return }
             eventHandler?(.stopLoading)
-            switch  result {
-            case .success(let productInfo):
-                self.products = productInfo
+            
+            switch result {
+            case .success(let innerResult):
+                switch innerResult {
+                case .success(let products):
+                    DispatchQueue.main.async {
+                        self.products = products
+                    }
+                case .failure(let error):
+                    eventHandler?(.error(error))
+                }
                 eventHandler?(.dataLoaded)
             case .failure(let error):
                 eventHandler?(.error(error))
